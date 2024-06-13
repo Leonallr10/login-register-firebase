@@ -22,17 +22,24 @@ This application allows users to register, create a password, log in, and view t
     ```sh
     npm install
     ```
+    ```sh
+   npm install bcrypt
+    ```
+    ```sh
+    npm install dotenv bcrypt express body-parser firebase-admin
+    ```
 
-3. **Setup Firebase**:
+
+4. **Setup Firebase**:
     - Go to the [Firebase Console](https://console.firebase.google.com/).
     - Click on "Add Project" and follow the steps to create a new Firebase project.
 
-4. **Register your web app in Firebase**:
+5. **Register your web app in Firebase**:
     - In the Firebase console, click on the "Web" icon to add Firebase to your web app.
     - Register the app and copy the Firebase configuration object.
     - Replace the placeholders in `public/scripts/firebase_config.js` with your actual Firebase config values.
 
-5. **Enable Firebase services**:
+6. **Enable Firebase services**:
     - **Authentication**:
         - Go to the Firebase console.
         - Select "Authentication" from the left-hand menu.
@@ -46,12 +53,12 @@ This application allows users to register, create a password, log in, and view t
         - Select "Storage" from the left-hand menu.
         - Click "Get Started" and follow the steps to set up Firebase Storage.
 
-6. **Create a Firebase service account**:
+7. **Create a Firebase service account**:
     - Go to the [Firebase Console Service Accounts page](https://console.firebase.google.com/u/0/project/_/settings/serviceaccounts/adminsdk).
     - Click "Generate New Private Key" and download the JSON file.
     - Move the downloaded JSON file to your project directory and rename it to `serviceAccountKey.json`.
 
-7. **Configure environment variables**:
+8. **Configure environment variables**:
     - Create a `.env` file in the root directory of your project.
     - Add your Firebase configuration and service account path to the `.env` file:
       ```plaintext
