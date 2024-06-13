@@ -106,3 +106,56 @@ project-root/
 ├── .env                            # Environment variables
 ├── package.json                    # Node.js dependencies and scripts
 └── package-lock.json               # Exact versions of Node.js dependencies
+```
+
+## 1. Create a Firebase Project
+
+- Go to the [Firebase Console](https://console.firebase.google.com/).
+- Click on "Add Project" and follow the steps to create a new Firebase project.
+
+## 2. Register your Web App in Firebase
+
+- In the Firebase console, click on the "Web" icon to add Firebase to your web app.
+- Register the app and copy the Firebase configuration object provided.
+
+## 3. Enable Firebase Authentication
+
+- In the Firebase console, select "Authentication" from the left-hand menu.
+- Click on "Sign-in method" and enable "Email/Password" authentication.
+- Optionally, enable other sign-in providers like Google, Facebook, etc.
+
+## 4. Set Up Firestore Database
+
+- In the Firebase console, select "Firestore Database" from the left-hand menu.
+- Click "Create Database" and follow the steps to set up Firestore in test mode.
+- Firestore will be used to store user details and passwords.
+
+## 5. Set Up Firebase Storage
+
+- In the Firebase console, select "Storage" from the left-hand menu.
+- Click "Get Started" and follow the steps to set up Firebase Storage.
+- Firebase Storage will be used to store user profile photos.
+
+## Firestore Database Structure
+
+You'll need to create a Firestore database structure to store user details and passwords. Below is an example structure:
+
+### Collections and Documents
+
+- **users** (Collection)
+  - *user_id* (Document)
+    - email (String)
+    - name (String)
+    - age (Number)
+    - dob (String)
+    - gender (String)
+    - occupation (String)
+    - address (String)
+    - place (String)
+    - photoUrl (String) - URL of the uploaded photo
+    - username (String)
+
+- **passwords** (Collection)
+  - *username* (Document)
+    - password (String)
+
