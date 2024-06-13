@@ -76,59 +76,26 @@ This application allows users to register, create a password, log in, and view t
 
 ## Project Structure
 
-
-## Scripts
-
-### `public/scripts/firebase_config.js`
-
-Configure Firebase SDK.
-
-### `public/scripts/auth.js`
-
-Handle login functionality.
-
-### `public/scripts/register.js`
-
-Handle user registration and image upload.
-
-### `public/scripts/password.js`
-
-Handle password creation.
-
-### `public/scripts/user_details.js`
-
-Fetch and display user details.
-
-## API Endpoints
-
-### POST `/user/register`
-
-Register a new user.
-
-### POST `/auth/create-password`
-
-Create a password for a registered user.
-
-### GET `/user/details/:username`
-
-Fetch user details by username.
-
-## Notes
-
-- Ensure you never expose your Firebase credentials or service account key in public repositories.
-- Always use environment variables to manage sensitive data.
-- Follow Firebase's best practices for security and data management.
-
-## Troubleshooting
-
-If you encounter issues:
-
-- Check the console for error messages.
-- Ensure all Firebase services (Authentication, Firestore, Storage) are properly configured.
-- Verify that your `.env` file contains the correct information.
-- Ensure the service account key file is correctly placed and referenced.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
+```plaintext
+project-root/
+├── public/
+│   ├── create_password.html        # Page to create password for new users
+│   ├── index.html                  # Login page
+│   ├── register.html               # Registration page
+│   ├── user_details.html           # User details page
+│   ├── scripts/                    # JavaScript files for frontend functionality
+│   │   ├── firebase_config.js      # Firebase configuration
+│   │   ├── auth.js                 # Authentication logic
+│   │   ├── register.js             # Registration logic
+│   │   ├── password.js             # Password creation logic
+│   │   ├── user_details.js         # User details fetching logic
+│   └── styles/                     # CSS files for styling
+│       └── main.css                # Main stylesheet
+├── server/                         # Node.js server-side code
+│   ├── app.js                      # Main application file
+│   ├── routes/                     # API routes
+│   │   ├── auth.js                 # Authentication routes
+│   │   └── user.js                 # User routes
+├── .env                            # Environment variables
+├── package.json                    # Node.js dependencies and scripts
+└── package-lock.json               # Exact versions of Node.js dependencies
